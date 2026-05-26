@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "nuxt-wordpress-playground",
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@21pixels/nuxt-wordpress": "file:../",
+    "nuxt": "^4.3.1"
+  }
+}
