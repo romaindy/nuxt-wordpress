@@ -2,7 +2,7 @@
   "name": "nuxt-wordpress",
   "version": "1.0.0",
   "description": "Nuxt module for WordPress",
-  "repository": "21Pixels/nuxt-wordpress",
+  "repository": "@21Pixels/nuxt-wordpress",
   "license": "MIT",
   "type": "module",
   "exports": {
