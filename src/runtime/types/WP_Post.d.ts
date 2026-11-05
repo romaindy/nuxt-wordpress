@@ -1,4 +1,4 @@
-export interface WPPost {
+interface WP_Post {
   id: number
   slug: string
   title: { rendered: string }

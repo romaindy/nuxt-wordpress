@@ -1,4 +1,4 @@
-export interface YoastHeadJson {
+interface YoastHeadJson {
   title?: string
   description?: string
   canonical?: string

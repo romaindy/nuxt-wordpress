@@ -1,6 +1,3 @@
-import { decode } from 'he'
-import type { YoastHeadJson } from '#imports'
-
 const decodeHtml = (value?: string) => {
   if (!value) return value
 

@@ -1,22 +1,18 @@
-import { defineNuxtModule, createResolver, addImportsDir } from '@nuxt/kit';
+import { createJiti } from "file:///Users/romain/Sites/nuxt-wordpress/node_modules/jiti/lib/jiti.mjs";
 
-const module$1 = defineNuxtModule({
-  meta: {
-    name: "@21pixels/nuxt-wordpress",
-    configKey: "wordpress"
+const jiti = createJiti(import.meta.url, {
+  "interopDefault": true,
+  "alias": {
+    "@21pixels/nuxt-wordpress": "/Users/romain/Sites/nuxt-wordpress"
   },
-  defaults: {
-    baseUrl: ""
-  },
-  setup(_options, _nuxt) {
-    const resolver = createResolver(import.meta.url);
-    _nuxt.options.runtimeConfig.public.wordpress = {
-      baseUrl: _options.baseUrl ?? ""
-    };
-    addImportsDir(resolver.resolve("./runtime/composables"));
-    addImportsDir(resolver.resolve("./runtime/types"));
-    addImportsDir(resolver.resolve("./runtime/utils"));
+  "transformOptions": {
+    "babel": {
+      "plugins": []
+    }
   }
-});
+})
 
-export { module$1 as default };
+/** @type {import("/Users/romain/Sites/nuxt-wordpress/src/module.js")} */
+const _module = await jiti.import("/Users/romain/Sites/nuxt-wordpress/src/module.ts");
+
+export default _module?.default ?? _module;
