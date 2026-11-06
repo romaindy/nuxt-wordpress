@@ -1,0 +1,1 @@
+export declare const requestWooCommerce: <T>(event: unknown, endpoint: string, options?: Parameters<typeof $fetch<T>>[1]) => Promise<import("nitropack").TypedInternalResponse<import("nitropack").NitroFetchRequest, T, "get"> | undefined>;
